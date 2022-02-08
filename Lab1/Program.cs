@@ -9,7 +9,7 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
-            int MAX = 10000;
+            int MAX = 100000;
 
             for (int c = 0; c < 10; c++)
             {
@@ -22,6 +22,8 @@ namespace Lab1
 
                 //var dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
                 var bstKeyValueMap = new BinarySearchTreeKeyValueMap<int, int>();
+                //var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
+                //var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
 
 
 
@@ -41,13 +43,13 @@ namespace Lab1
 
 
         public static void CreateKeyValueMap<TKey, TValue>(
-                IKeyValueMap<TKey,TValue> keyValueMap,
-                List<KeyValuePair<TKey, TValue>> keyValuePairs )
+                IKeyValueMap<TKey, TValue> keyValueMap,
+                List<KeyValuePair<TKey, TValue>> keyValuePairs)
         {
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
-            foreach( var kvp in keyValuePairs)
+            foreach (var kvp in keyValuePairs)
             {
                 keyValueMap.Add(kvp.Key, kvp.Value);
             }
@@ -63,14 +65,34 @@ namespace Lab1
                 IKeyValueMap<TKey, TValue> keyValueMap,
                 List<KeyValuePair<TKey, TValue>> keyValuePairs)
         {
-           
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+            foreach (var kvp in keyValuePairs)
+            {
+                var value = keyValueMap.Get(kvp.Key);
+            }
+            stopwatch.Stop();
+
+            Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
+            Console.WriteLine(keyValueMap.Height);
         }
 
         public static void RemoveKeyValueMap<TKey, TValue>(
                 IKeyValueMap<TKey, TValue> keyValueMap,
                 List<KeyValuePair<TKey, TValue>> keyValuePairs)
         {
-            
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+            foreach (var kvp in keyValuePairs)
+            {
+                var removed = keyValueMap.Remove(kvp.Key);
+            }
+            stopwatch.Stop();
+
+            Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
+            Console.WriteLine(keyValueMap.Height);
         }
     }
 }
