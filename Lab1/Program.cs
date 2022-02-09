@@ -202,8 +202,8 @@ namespace Lab1
             #region removal
             //Console.WriteLine("DictionaryKeyValueMap\n");
             //Console.WriteLine("BSTKeyValueMap\n");
-            Console.WriteLine("AVLKeyValueMap\n");
-            //Console.WriteLine("RedBlackKeyValueMap\n");
+            //Console.WriteLine("AVLKeyValueMap\n");
+            Console.WriteLine("RedBlackKeyValueMap\n");
             Console.WriteLine("Ordered");
 
             for (int c = 0; c < 10; c++)
@@ -232,18 +232,18 @@ namespace Lab1
                 // ---------------------------------------------------------------------
 
                 // AVL
-                var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
+                /*var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
 
                 CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);
-                RemoveKeyValueMap(avlKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(avlKeyValueMap, intKeyValuePairs);*/
 
                 // ---------------------------------------------------------------------
 
                 // RedBlack
-                /*var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
+                var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
 
                 CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);
-                RemoveKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);*/
+                RemoveKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);
             }
 
             Console.WriteLine("\nUnordered");
@@ -278,22 +278,22 @@ namespace Lab1
                 // ---------------------------------------------------------------------
 
                 // AVL
-                var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
+                /*var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
 
                 intKeyValuePairs.Shuffle();
 
                 CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);
-                RemoveKeyValueMap(avlKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(avlKeyValueMap, intKeyValuePairs);*/
 
                 // ---------------------------------------------------------------------
 
                 // RedBlack
-                /*var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
+                var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
 
                 intKeyValuePairs.Shuffle();
 
                 CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);
-                RemoveKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);*/
+                RemoveKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);
             }
             #endregion
         }
