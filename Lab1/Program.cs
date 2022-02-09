@@ -9,7 +9,7 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
-            int MAX = 100000;
+            int MAX = 10000000;
 
             #region insertion
             /*//Console.WriteLine("DictionaryKeyValueMap\n");
@@ -102,9 +102,7 @@ namespace Lab1
             #endregion
 
             #region lookup
-            // create 
-
-            //Console.WriteLine("DictionaryKeyValueMap\n");
+            /*//Console.WriteLine("DictionaryKeyValueMap\n");
             //Console.WriteLine("BSTKeyValueMap\n");
             //Console.WriteLine("AVLKeyValueMap\n");
             //Console.WriteLine("RedBlackKeyValueMap\n");
@@ -120,31 +118,34 @@ namespace Lab1
                 }
 
                 // Hashtable
-                var dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
+                *//*var dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
 
                 CreateKeyValueMap<int, int>(dictionaryKeyValueMap, intKeyValuePairs);
-                QueryKeyValueMap(dictionaryKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(dictionaryKeyValueMap, intKeyValuePairs);*//*
 
                 // ---------------------------------------------------------------------
 
                 // BST
-                /*var bstKeyValueMap = new BinarySearchTreeKeyValueMap<int, int>();
+                *//*var bstKeyValueMap = new BinarySearchTreeKeyValueMap<int, int>();
 
-                CreateKeyValueMap<int, int>(bstKeyValueMap, intKeyValuePairs);*/
+                CreateKeyValueMap<int, int>(bstKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(bstKeyValueMap, intKeyValuePairs);*//*
 
                 // ---------------------------------------------------------------------
 
                 // AVL
-                /*var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
+                *//*var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
 
-                CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);*/
+                CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(avlKeyValueMap, intKeyValuePairs);*//*
 
                 // ---------------------------------------------------------------------
 
                 // RedBlack
-                /*var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
+                *//*var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
 
-                CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);*/
+                CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);*//*
             }
 
             Console.WriteLine("\nUnordered");
@@ -159,12 +160,110 @@ namespace Lab1
                 }
 
                 // Hashtable
-                var dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
+                *//*var dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
 
                 intKeyValuePairs.Shuffle();
 
                 CreateKeyValueMap<int, int>(dictionaryKeyValueMap, intKeyValuePairs);
-                QueryKeyValueMap(dictionaryKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(dictionaryKeyValueMap, intKeyValuePairs);*//*
+
+                // ---------------------------------------------------------------------
+
+                // BST
+                *//*var bstKeyValueMap = new BinarySearchTreeKeyValueMap<int, int>();
+
+                intKeyValuePairs.Shuffle();
+
+                CreateKeyValueMap<int, int>(bstKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(bstKeyValueMap, intKeyValuePairs);*//*
+
+                // ---------------------------------------------------------------------
+
+                // AVL
+                *//*var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
+
+                intKeyValuePairs.Shuffle();
+
+                CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(avlKeyValueMap, intKeyValuePairs);*//*
+
+                // ---------------------------------------------------------------------
+
+                // RedBlack
+               *//* var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
+
+                intKeyValuePairs.Shuffle();
+
+                CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);
+                QueryKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);*//*
+            }*/
+            #endregion
+
+            #region removal
+            //Console.WriteLine("DictionaryKeyValueMap\n");
+            //Console.WriteLine("BSTKeyValueMap\n");
+            Console.WriteLine("AVLKeyValueMap\n");
+            //Console.WriteLine("RedBlackKeyValueMap\n");
+            Console.WriteLine("Ordered");
+
+            for (int c = 0; c < 10; c++)
+            {
+                var intKeyValuePairs = new List<KeyValuePair<int, int>>();
+
+                for (int i = 0; i < MAX; i++)
+                {
+                    intKeyValuePairs.Add(new KeyValuePair<int, int>(i, i + 2));
+                }
+
+                // Hashtable
+                /*var dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
+
+                CreateKeyValueMap<int, int>(dictionaryKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(dictionaryKeyValueMap, intKeyValuePairs);*/
+
+                // ---------------------------------------------------------------------
+
+                // BST
+                /*var bstKeyValueMap = new BinarySearchTreeKeyValueMap<int, int>();
+
+                CreateKeyValueMap<int, int>(bstKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(bstKeyValueMap, intKeyValuePairs);*/
+
+                // ---------------------------------------------------------------------
+
+                // AVL
+                var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
+
+                CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(avlKeyValueMap, intKeyValuePairs);
+
+                // ---------------------------------------------------------------------
+
+                // RedBlack
+                /*var redBlackKeyValueMap = new RedBlackTreeKeyValueMap<int, int>();
+
+                CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);*/
+            }
+
+            Console.WriteLine("\nUnordered");
+
+            for (int c = 0; c < 10; c++)
+            {
+                var intKeyValuePairs = new List<KeyValuePair<int, int>>();
+
+                for (int i = 0; i < MAX; i++)
+                {
+                    intKeyValuePairs.Add(new KeyValuePair<int, int>(i, i + 2));
+                }
+
+                // Hashtable
+                /*var dictionaryKeyValueMap = new DictionaryKeyValueMap<int, int>();
+
+                intKeyValuePairs.Shuffle();
+
+                CreateKeyValueMap<int, int>(dictionaryKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(dictionaryKeyValueMap, intKeyValuePairs);*/
 
                 // ---------------------------------------------------------------------
 
@@ -173,16 +272,18 @@ namespace Lab1
 
                 intKeyValuePairs.Shuffle();
 
-                CreateKeyValueMap<int, int>(bstKeyValueMap, intKeyValuePairs);*/
+                CreateKeyValueMap<int, int>(bstKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(bstKeyValueMap, intKeyValuePairs);*/
 
                 // ---------------------------------------------------------------------
 
                 // AVL
-                /*var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
+                var avlKeyValueMap = new AVLTreeKeyValueMap<int, int>();
 
                 intKeyValuePairs.Shuffle();
 
-                CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);*/
+                CreateKeyValueMap<int, int>(avlKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(avlKeyValueMap, intKeyValuePairs);
 
                 // ---------------------------------------------------------------------
 
@@ -191,12 +292,9 @@ namespace Lab1
 
                 intKeyValuePairs.Shuffle();
 
-                CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);*/
+                CreateKeyValueMap<int, int>(redBlackKeyValueMap, intKeyValuePairs);
+                RemoveKeyValueMap(redBlackKeyValueMap, intKeyValuePairs);*/
             }
-            #endregion
-
-            #region removal
-
             #endregion
         }
 
@@ -233,8 +331,8 @@ namespace Lab1
             }
             stopwatch.Stop();
 
-            Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
-            Console.WriteLine(keyValueMap.Height);
+            //Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
+            //Console.WriteLine(keyValueMap.Height);
         }
 
         public static void RemoveKeyValueMap<TKey, TValue>(
@@ -251,7 +349,7 @@ namespace Lab1
             stopwatch.Stop();
 
             Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
-            Console.WriteLine(keyValueMap.Height);
+            //Console.WriteLine(keyValueMap.Height);
         }
     }
 }
